@@ -21,21 +21,21 @@ const App = () => {
       });
   }, []);
 
-  if(loading) {
-    return<div> Loading...</div>
+  if (loading) {
+    return <div> Loading...</div>
   }
 
-  if(error){
+  if (error) {
     return <div>An error occured : {error.message}</div>
   }
 
-  if(!data){
+  if (!data) {
     return <div> No data found</div>
   }
 
   return (
     <div>
-      <h1>Data Fetch From API</h1>
+      <h1>Data Fetched from API</h1>
       <pre>{JSON.stringify(data, null, 2)}</pre>
     </div>
   );
